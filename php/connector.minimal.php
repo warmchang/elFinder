@@ -58,6 +58,7 @@ function access($attr, $path, $data, $volume) {
 		:  null;                                    // else elFinder decide it itself
 }
 
+$username =  $_GET['startpath'];
 
 // Documentation for connector options:
 // https://github.com/Studio-42/elFinder/wiki/Connector-configuration-options
@@ -66,7 +67,7 @@ $opts = array(
 	'roots' => array(
 		array(
 			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
-			'path'          => '../data/User/',                 // path to files (REQUIRED)
+			'path'          => '../data/User/' . $username,                 // path to files (REQUIRED)
 			'URL'           => dirname($_SERVER['PHP_SELF']) . '/../data/User/', // URL to files (REQUIRED)
 			// 'uploadDeny'    => array('all'),                // All Mimetypes not allowed to upload
 			// 'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload

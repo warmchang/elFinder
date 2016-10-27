@@ -35,12 +35,22 @@
 
 		<!-- elFinder initialization (REQUIRED) -->
 		<script type="text/javascript" charset="utf-8">
+			function GetQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+				var r = window.location.search.substr(1).match(reg);
+				if (r != null) return unescape(r[2]); return null;
+			}
+
+			var path= GetQueryString("startpath");
+
 			// Documentation for client options:
 			// https://github.com/Studio-42/elFinder/wiki/Client-configuration-options
 			$(document).ready(function() {
 				$('#elfinder').elfinder({
-					url : 'php/connector.minimal.php'  // connector URL (REQUIRED)
+					url : 'php/connector.minimal.php?startpath='+path  // connector URL (REQUIRED)
 					, lang: 'zh_CN'                    // language (OPTIONAL)
+					// , width:800px
+					// , height:500px
 				});
 			});
 		</script>
