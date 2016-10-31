@@ -151,8 +151,8 @@ if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object'
 			'btnApprove': '至 $1 并确认', // from v2.1 added 26.04.2012
 			'btnUnmount': '卸载', // from v2.1 added 30.04.2012
 			'btnConv'   : '转换', // from v2.1 added 08.04.2014
-			'btnCwd'    : '这里',      // from v2.1 added 22.5.2015
-			'btnVolume' : '卷',    // from v2.1 added 22.5.2015
+			'btnCwd'    : '当前目录',      // from v2.1 added 22.5.2015
+			'btnVolume' : '全部目录',    // from v2.1 added 22.5.2015
 			'btnAll'    : '全部',       // from v2.1 added 22.5.2015
 			'btnMime'   : 'MIME类型', // from v2.1 added 22.5.2015
 			'btnFileName':'文件名',  // from v2.1 added 22.5.2015
